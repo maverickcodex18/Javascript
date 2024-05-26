@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY METHODS</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // concat , entries , every,flat,flatMap
+
+        var arr1=["vk",'rs','msd'];
+        var arr2=['abd','fdp','qdk'];
+        var arr3=arr1.concat(arr2);
+        console.log(arr3);
+        var entriesMethod=arr3.entries();
+        for(val of entriesMethod){
+            document.write(val+"<br>");
+        }
+        function len(val){
+            return val.length<=2;
+        }
+        document.write("<strong>All values are smaller than eq to length 2: </strong>"+arr2.every(len)+"<br>");
+        var arr4=[1,2,3,[4,5],[6,[7,8,9]]];
+        var arr5=arr4.flat();
+        document.write("<strong>Flat(): </strong> of "+arr4+"(not flat see SOURCE CODE) is : "+arr5+"<br>");
+        document.write("<strong>flatMap(): </strong> of "+arr5+"(already flat see SOURCE CODE, as this works only with flat) is : "+arr5.flatMap(x=> x/2)+"<br>");
+
+        //from fill
+
+        var arr3Copy1=Array.from(arr3);
+        var arr3Copy2=Array.from(arr3);
+        document.write("<h4>Fill(): Replacing every element of Arr3 with :  </h4>");
+        console.log(arr3Copy1.fill("replaced"));
+        document.write("<br>");
+        document.write("<h4>Fill(): Replacing every element of Arr3 with User Input:  </h4>");
+        alert("Choose from Index:0 t 5");
+        var start=parseInt(prompt("Start Index: "));
+        var end=parseInt(prompt("End Index: "));
+        var replace=prompt("Enter string from ywhich you want to replace: ");
+        console.log(arr3Copy2.fill(replace,start,end+1));
+        document.write("<br>");
+
+
+        // filter
+        var arr6=[1,2,3,4,5,6,7,8,9];
+        document.writeln("Before Filter Arr 6: "+arr6+"<br>");
+        window.choice=parseInt(prompt("Enter number from 1 to 9 to filter ARR6: "));
+        function check(val){
+            return val>choice;
+        }
+        document.writeln("After Filter Arr 6: "+arr6.filter(check)+"<br>");
+
+
+        //find findIndex
+        choice=parseInt(prompt("Enter number from 1 to 9 to FIND 1ST OCCURENCE IN WHICH IS >=USER INPUT ARR6: "));
+        document.writeln("Finding Arr 6: "+arr6.find(x => x>=choice)+"<br>");
+        document.writeln("Finding Index Arr 6: "+arr6.findIndex(x => x>=choice)+"<br>");
+
+        //forEach
+        document.writeln("<h4>Arr6 after ForEach: </h4>");
+        arr6.forEach(function writer(fetch){
+            document.writeln(fetch);
+        });
+
+    </script>
+</body>
+</html>

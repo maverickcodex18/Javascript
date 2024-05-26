@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT METHODS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function employee(id,name,salary){
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+            this.updateSalary=updateSalary;
+            function updateSalary(salary){
+                this.salary=salary;
+            }
+        }
+
+        var emp1=new employee(18,"Chitransh",10000000);
+        document.write("Old Salary: "+emp1.salary+"<br>");
+        emp1.updateSalary(30000000);
+        document.write("Updated Salary: "+emp1.salary);
+    </script>
+</body>
+</html>

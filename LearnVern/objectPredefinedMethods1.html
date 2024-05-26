@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT PREDEFINED METHODS 1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function emp(id,name,salary){
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+        }
+        var emp1=new emp(18,"Virat",20);
+        var emp2=Object.assign({},emp1);
+        var emp3=Object.assign({salary:40,location:"Delhi"},emp1);
+
+        console.log(emp1,emp2,emp3);
+    </script>
+</body>
+</html>

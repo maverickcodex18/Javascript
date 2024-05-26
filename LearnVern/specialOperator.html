@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Operator</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x=parseInt(prompt("Operand 1:  "));
+        var y=parseInt(prompt("Operand 2:  "));
+        document.write("Using Ternary Operator: ");
+        document.write((x==y)?"x=y":"x!=y");
+        document.write("<br>");
+        document.write("<h2> delete and in operators</h2>");
+        document.write("<br>");
+        var person={
+            firstname:"a",
+            lastname:"b"
+        };
+        var inp=prompt("write property you want to delete in OBJECT PERSON: ");
+        if (inp in person){
+            document.write("Found and Deleted");
+            delete person.inp;
+        }
+        else document.write("Not Found");
+        document.write("<br>");
+        document.write("<h2>INSTANCEOF nad TYPEOF</h2>");
+        document.write("<br>");
+        document.write("abc" instanceof String);
+        document.write("<br>");
+        document.write(typeof(true));
+    </script>
+</body>
+</html>

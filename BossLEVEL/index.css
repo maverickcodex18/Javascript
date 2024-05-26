@@ -1,0 +1,12 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+}
+h1{
+    grid-column: span 2;
+}
+main > div{
+    height: 100%;
+    width: 100%;
+}

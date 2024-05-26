@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a=100;
+        function abc(){
+            document.write("Within the abc(): a= "+a);
+            document.write("<br>");
+            window.z=50; //not accessible outside , unto used with window
+            document.write("z= "+z);
+            document.write("<br>");
+        }
+        document.write("Outside the abc():a= "+a);
+        document.write("<br>");
+        document.write("From outside but abc() not called: z= "+window.z);
+        document.write("<br>");
+        abc();
+        document.write("From outside: z= "+z);
+    </script>
+</body>
+</html>

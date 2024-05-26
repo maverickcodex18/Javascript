@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM WINDOW</title>
+</head>
+<body>
+    <input type="button" value="Open new Window" onclick="newWindow()">
+    <input type="button" value="Open Google" onclick="newWindow('https://www.google.com')">
+    <input type="button" value="Close Window" onclick="closeWindow()">
+
+    <script type="text/javascript">
+        function newWindow(s){
+            window.setTimeout(window.open(s),3000);
+
+        }
+        function closeWindow(){
+            var choice=window.confirm("Really wanna Close ?");
+            if(choice) window.setTimeout(window.close(),2000);
+        }
+    </script>
+</body>
+</html>

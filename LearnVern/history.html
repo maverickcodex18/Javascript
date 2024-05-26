@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object</title>
+</head>
+<body>
+    <input type="button" value="Go back by n pages" onclick="goBackN()">
+    <input type="button" value="Go back" onclick="goBack()">
+    <script type="text/javascript">
+        document.writeln("Current Page History: "+window.history.length);
+    </script>
+    <input type="button" value="Go forward" onclick="goForward()">
+    <input type="button" value="Go forward by N pages" onclick="goForwardN()">
+    <script type="text/javascript">
+        function goBack(){
+            history.go(-1);
+        }
+        function goBackN(){
+            history.go(-parseInt(prompt("No of Pages you want to go back: ")));
+        }
+        function goForwardN(){
+            history.go(parseInt(prompt("No of Pages you want to go forward: ")));
+        }
+        function goForward(){
+            history.go(1);
+        }
+    </script>
+</body>
+</html>

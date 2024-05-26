@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+<body>
+    <form name="form1">
+        Your Name: <input type="text" name="name" onkeyup="show(this)">
+        Gender: Male<input type="radio" name="gender" value="Male" onclick="showGender(this)">
+        Gender: Female<input type="radio" name="gender" value="Female" onclick="showGender(this)">
+    </form>
+    <div id="show"></div>
+    <div id="showGender"></div>
+    <script type="text/javascript">
+        function show(input){
+            var f=document.getElementById("show")
+            f.innerHTML="Welcome: "+input.value;
+        }
+        function showGender(input){
+            var f=document.getElementById("showGender")
+            f.innerHTML="Gender: "+input.value;
+        }
+
+    </script>
+</body>
+</html>
